@@ -1,0 +1,607 @@
+
+
+.account__overlay {
+
+  padding: 6.875rem 0;
+
+}
+
+.account__title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.account__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.account__tab-link.is-active {
+  color: var(--primary-color);
+}
+
+.account__content {
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  box-sizing: border-box;
+}
+
+.account__content--admin-wide {
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* Блок таблицы: на всю ширину контента + внутренние отступы как у строк меню (menu-item padding 15px) */
+.account-admin-table-outer {
+  width: 100%;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.account-admin-clients__status {
+  text-align: center;
+  margin: 0;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+}
+
+.account-admin-clients__status--error {
+  color: #dc3545;
+}
+
+.account-admin-clients {
+  width: 100%;
+}
+
+.account-admin-applications__text,
+.account-admin-orders__text {
+  margin-bottom: 1.5rem;
+}
+
+.account-admin-applications__filter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 2.5rem;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+.account-admin-applications__filter-label {
+  font-family: "Merriweather", serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--primary-color);
+  text-align: left;
+}
+
+.account-admin-table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+  color: var(--text-color);
+}
+
+.account-admin-table th,
+.account-admin-table td {
+  padding: 12px 8px;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+  border-bottom: 1px solid var(--account-table-divider, color-mix(in srgb, var(--primary-color) 18%, transparent));
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+}
+
+.account-admin-table thead th {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  vertical-align: bottom;
+  font-family: "Merriweather", serif;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  white-space: nowrap;
+}
+
+.account-admin-table tbody td {
+  font-size: 15px;
+  padding-top: 12px;
+  padding-bottom: 14px;
+  color: var(--text-color);
+  overflow-wrap: break-word;
+}
+
+/* Длинные email — перенос только если не помещается целиком */
+.account-admin-table--applications tbody td:nth-child(4),
+.account-admin-table--clients tbody td:nth-child(4) {
+  overflow-wrap: break-word;
+}
+
+/* Короткие колонки без переноса */
+.account-admin-table--applications tbody td:nth-child(7),
+.account-admin-table--applications tbody td:nth-child(8),
+.account-admin-table--orders tbody td:nth-child(5) {
+  white-space: nowrap;
+}
+
+.account-cart,
+.account-order-history {
+  width: 100%;
+}
+
+.account-order-history__number {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-family: "Merriweather", serif;
+  font-size: inherit;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: left;
+}
+
+.account-order-history__number:hover,
+.account-order-history__number:focus-visible {
+  text-decoration: none;
+}
+
+.account-order-history__chevron {
+  font-size: 0.7em;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.account-admin-table--history .account-order-history__row.is-expanded td,
+.account-admin-table--orders .account-order-history__row.is-expanded td {
+  border-bottom: none;
+}
+
+.account-order-history__details-row td {
+  padding: 0 4px 2rem;
+  vertical-align: top;
+  border-top: none;
+  border-bottom: 1px solid var(--account-table-divider, color-mix(in srgb, var(--primary-color) 18%, transparent));
+}
+
+.account-order-history__details-panel {
+  margin-left: -18px;
+  margin-right: -18px;
+  padding: 0.75rem 1.25rem 0;
+  background: color-mix(in srgb, var(--decorate-bg) 45%, transparent);
+  border: none;
+  border-radius: 0;
+}
+
+.account-order-history__details-panel .account-order__summary {
+  margin-bottom: 0;
+  padding-top: 0;
+  border-top: none;
+}
+
+.account-order-history__details-panel .account-order__details {
+  margin-top: 1.25rem;
+}
+
+.account-order-history__details-status {
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+  font-family: "Merriweather", serif;
+  font-size: 14px;
+  color: var(--default-font-input);
+}
+
+.account-order-history__details-status--error {
+  color: #dc3545;
+}
+
+.account-cart__qty {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.account-cart__qty-value {
+  min-width: 1.5rem;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.account-cart__qty-btn {
+  font-size: 1.05rem !important;
+  padding: 2px;
+  line-height: 1;
+}
+
+.account-cart__total {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  gap: 1rem;
+  margin-top: 2rem;
+  font-family: "Merriweather", serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-color);
+}
+
+.account-cart__total-label {
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+.account-cart__total-sum {
+  font-size: 1.25rem;
+}
+
+.account-cart__checkout {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+
+.account-admin-table--clients {
+  min-width: 520px;
+}
+
+.account-admin-table--applications {
+  min-width: 760px;
+}
+
+.account-admin-table--cart {
+  min-width: 560px;
+}
+
+.account-admin-table--history,
+.account-admin-table--order-items {
+  min-width: 640px;
+}
+
+.account-admin-table--orders {
+  min-width: 720px;
+}
+
+.account-profile__text {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.account-profile__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 42px;
+  justify-items: center;
+}
+
+.account-profile__password-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px 42px;
+  justify-items: center;
+  margin-top: 1.25rem;
+}
+
+.account-profile__password-confirm {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.account-profile__hint--password {
+  margin-top: 2.75rem;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.account-profile__actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.account-profile__hint {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--default-font-input);
+}
+
+.account-profile__message {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.account-profile__message.is-success {
+  color: #2db783;
+}
+
+.account-profile__message.is-error {
+  color: #dc3545;
+}
+
+.account-order {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid color-mix(in srgb, var(--primary-color) 22%, transparent);
+  max-width: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}
+
+/* История: после .account-order, иначе снова появляется линия над «Дата создания» */
+.account-order-history__details-panel .account-order.account-order--embedded {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
+  max-width: none;
+}
+
+.account-order-history__details-panel .account-order__total {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.account-order__page-title {
+  text-align: center;
+  margin: 0 0 1.5rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-color);
+}
+
+.account-order__muted,
+.account-order__error {
+  text-align: center;
+  font-family: "Merriweather", serif;
+  font-size: 15px;
+}
+
+.account-order__muted {
+  color: var(--default-font-input);
+}
+
+.account-order__error {
+  color: #dc3545;
+}
+
+.account-order__summary {
+  margin-bottom: 0.5rem;
+}
+
+.account-order__toggle {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.35rem 0;
+  margin: 0 0 0.75rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.account-order__toggle:hover .account-order__number,
+.account-order__toggle:focus-visible .account-order__number {
+  text-decoration: none;
+}
+
+.account-order__number {
+  font-family: "Merriweather", serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.account-order__chevron {
+  font-size: 0.75rem;
+  color: var(--text-color);
+}
+
+.account-order__meta {
+  margin: 0.35rem 0;
+  text-align: center;
+  font-family: "Merriweather", serif;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.account-order__meta-label {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-right: 0.25rem;
+}
+
+.account-order__meta-value {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-color);
+}
+
+.account-order__details {
+  margin-top: 1.25rem;
+}
+
+.account-order__items-table {
+  margin-bottom: 2.5rem;
+}
+
+.account-order__meta.account-order__delivery-meta {
+  margin: 0 0 1.25rem;
+  text-align: left;
+}
+
+.account-order__field-label {
+  display: block;
+  font-family: "Merriweather", serif;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--primary-color);
+}
+
+.account-order__readonly-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.account-order__readonly-grid--2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.account-order__pickup-comment {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.account-order__field {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--form-accent-heading-to-field, 0.5rem);
+  text-align: left;
+}
+
+.account-order__input-mimic {
+  display: block;
+  width: 100%;
+  max-width: 256px;
+  box-sizing: border-box;
+  font-family: "Merriweather", serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.35;
+  color: var(--text-color);
+  padding: 0 0 6px 20px;
+  margin: 0;
+  border: none;
+  border-bottom: 1.5px solid var(--text-color);
+  background: transparent;
+  min-height: 1.5em;
+  word-break: break-word;
+  align-self: center;
+}
+
+.account-order__footer-meta {
+  font-family: "Merriweather", serif;
+  font-size: 14px;
+  color: var(--text-color);
+  margin: 2.35rem 0 1rem;
+  text-align: left;
+}
+
+.account-order__footer-meta p {
+  margin: 0.35rem 0;
+  text-align: left;
+}
+
+.account-order__total {
+  text-align: center;
+  font-family: "Merriweather", serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 0.5rem;
+}
+
+.account-order__total-caption {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.account-order__total-sum {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-transform: none;
+}
+
+/* Избранное / корзина: без двойного вертикального отступа глобального .content (margin 6.875rem) */
+.account-client-panel {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Сетка как у меню: отступы задает .menu-category__list в Menu.css */
+.account-favorites__list {
+  margin-top: 0;
+}
+
+.account__stub {
+  background: color-mix(in srgb, var(--decorate-bg) 70%, transparent);
+  padding: 24px;
+  border: 1px solid color-mix(in srgb, var(--primary-color) 30%, transparent);
+}
+
+@media (max-width: 768px) {
+  .account-order__readonly-grid,
+  .account-order__readonly-grid--2 {
+    grid-template-columns: 1fr;
+  }
+
+  .account__overlay {
+    padding: 4rem 0;
+  }
+
+  .account__title {
+    margin-bottom: 2rem;
+  }
+
+  .account__tabs {
+    gap: 18px 22px;
+  }
+
+  .account-profile__grid,
+  .account-profile__password-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .account-profile__birth {
+    margin-top: 18px;
+  }
+}
+

@@ -1,0 +1,222 @@
+/* ------------- Reviews ------------- */
+.reviews__slider {
+    position: relative;
+    overflow: visible;
+}
+
+.reviews__slider .swiper,
+.reviews__slider .swiper-wrapper,
+.reviews__slider .swiper-slide {
+    overflow: visible;
+}
+
+.reviews-item {
+    position: relative;
+    padding: 15px;
+    background: var(--decorate-bg);
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    overflow: visible;
+}
+
+.reviews-item__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    min-height: 0;
+    justify-content: flex-start;
+    gap: 0.35rem;
+}
+
+.reviews-item__text {
+    margin: 0;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+}
+
+.reviews-item__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 0.75rem;
+    flex-shrink: 0;
+    margin-top: 0.25rem;
+}
+
+.reviews__author {
+    font-weight: 600;
+}
+
+.reviews-item__date {
+    margin: 0;
+    flex-shrink: 0;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-size: 13px;
+    color: var(--text-color);
+    opacity: 0.85;
+}
+
+.reviews-modal__textarea {
+    width: min(538px, 100%);
+    min-height: 120px;
+    box-sizing: border-box;
+    color: var(--text-color);
+    border: none;
+    border-bottom: 1.5px solid var(--text-color);
+    padding: 8px 20px 10px;
+    background-color: transparent;
+    font-family: "Merriweather", serif;
+    font-weight: 600;
+    font-size: 15px;
+    resize: vertical;
+}
+
+.reviews-modal__textarea:focus {
+    outline: none;
+    border: 1.5px solid var(--text-color);
+    padding: 7px 19px 9px;
+}
+
+.reviews-modal__textarea::placeholder {
+    color: var(--default-font-input, #888);
+}
+
+.reviews__load-error,
+.reviews__submit-error {
+    text-align: center;
+    color: #dc3545;
+    font-family: "Merriweather", serif;
+    font-size: 14px;
+    margin: 0 0 1rem;
+}
+
+.reviews__empty {
+    text-align: center;
+    font-family: "Merriweather", serif;
+    font-size: 15px;
+    color: var(--text-color);
+    margin: 0;
+    padding: 2rem 1rem;
+}
+
+.reviews-prev,
+.reviews-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+}
+
+.reviews-prev {
+    left: -50px;
+}
+
+.reviews-next {
+    right: -50px;
+}
+
+@media (max-width: 1192px) {
+    .reviews.container {
+        overflow-x: hidden;
+    }
+
+    .reviews__slider {
+        overflow: hidden;
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+        box-sizing: border-box;
+    }
+
+    .reviews__slider .swiper {
+        overflow: hidden;
+    }
+
+    .reviews__slider .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    .reviews__slider .swiper-slide {
+        overflow: hidden;
+        box-sizing: border-box;
+        height: auto;
+    }
+
+    .reviews-item {
+        height: 100%;
+        min-height: 11rem;
+        max-width: 100%;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+
+    .reviews-item__meta {
+        flex-wrap: wrap;
+        gap: 0.35rem 0.5rem;
+    }
+
+    .reviews-item__date {
+        font-size: 12px;
+    }
+
+    .reviews-prev {
+        left: 0;
+    }
+
+    .reviews-next {
+        right: 0;
+    }
+}
+
+@media (max-width: 832px) {
+    .reviews__slider {
+        padding-left: 2.25rem;
+        padding-right: 2.25rem;
+    }
+
+    .reviews-item__date {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 580px) {
+
+    .reviews-prev,
+    .reviews-next {
+        display: none;
+    }
+}
+
+/* ------------- Stats ------------- */
+/* фон блока — в Stats.jsx (fixed-слой, без background-attachment) */
+
+/* ------------- Services ------------- */
+
+@media (max-width: 712px) {
+    .about__services-content .row {
+        justify-content: center;
+    }
+
+    .about__services-content .col-md-6 {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about__services-content .d-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        max-width: 18rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .about__services-content .me-3 {
+        margin-right: 0 !important;
+        margin-bottom: 0.75rem;
+    }
+}

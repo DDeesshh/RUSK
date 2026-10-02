@@ -1,0 +1,155 @@
+/* -------------------------- Fonts: см. styles/fonts.css -------------------------- */
+
+/* Bootstrap по умолчанию подставляет system-ui — перебиваем */
+:root {
+  --bs-body-font-family: 'Merriweather', serif;
+  --bs-font-sans-serif: 'Merriweather', serif;
+}
+
+body {
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+}
+
+input,
+textarea,
+select,
+button {
+  font-family: inherit;
+}
+
+::placeholder {
+  font-family: 'Merriweather', serif;
+  opacity: 1;
+}
+
+h1,
+.h1,
+.header__logo,
+.footer__center-logo {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 50px;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+h2,
+.h2 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  margin: 0;
+}
+
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+h3,
+.h3 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 15px;
+  text-transform: uppercase;
+  color: var(--text-color);
+  margin: 0;
+}
+
+p,
+a {
+  font-family: 'Merriweather', serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: var(--text-color);
+  margin: 0;
+  text-decoration: none;
+}
+
+.top-dishes__title,
+.home-menu__title,
+#booking-form {
+  scroll-margin-top: 1.5rem;
+}
+
+.book__title,
+.about__description-title,
+.reviews__title,
+.about__services-title,
+.menu-category__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 832px) {
+  .header__logo {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 880px) {
+
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  h3 {
+    font-size: 13px;
+  }
+
+  p {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 710px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 13px;
+  }
+
+  h3 {
+    font-size: 10px;
+  }
+
+  p {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 580px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 10px;
+  }
+
+  h3 {
+    font-size: 8px;
+  }
+
+  p {
+    font-size: 8px;
+  }
+}

@@ -1,0 +1,53 @@
+html {
+  overflow-x: clip;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--decorate-bg);
+}
+
+/* Статичный фон: работает в Chrome, Firefox, Safari (в т.ч. iOS), без пикселизации */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: var(--bg-image);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  pointer-events: none;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.content {
+  max-width: 1320px;
+  padding: 0 0.75rem;
+  margin: 6.875rem auto;
+}
+
+@media (max-width: 832px) {
+  .content {
+    margin-top: 5rem;
+    margin-bottom: 4.5rem;
+  }
+}
+
+::selection {
+  background-color: var(--scroll-color);
+}
+
+::-webkit-scrollbar {
+  background: var(--decorate-bg);
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scroll-color);
+}

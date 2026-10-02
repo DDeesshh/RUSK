@@ -1,0 +1,80 @@
+footer {
+    background: color-mix(in srgb, var(--decorate-bg) 90%, transparent);
+    box-shadow: 0 -6px 18px var(--primary-color);
+}
+
+.footer__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2.5rem 0 1.563rem;
+}
+
+.footer__center {
+    text-align: center;
+}
+
+.footer__nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.25rem 2.5rem;
+    margin-bottom: 2.375rem;
+}
+
+.footer__center-logo {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--text-color);
+    margin: 0 0 2rem;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.footer__center-logo:hover {
+    color: var(--primary-color);
+}
+
+.footer__hours {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+/* Планшеты */
+@media (max-width: 991px) {
+    .footer__container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer__contacts,
+    .footer__hours {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer__contacts {
+        margin-bottom: 2rem;
+    }
+
+    .footer__center {
+        margin-bottom: 3rem;
+    }
+
+    .footer__center-logo {
+        margin-bottom: 1.25rem;
+    }
+
+    .footer__nav {
+        margin-bottom: 1.5rem;
+        gap: 1rem 1.75rem;
+    }
+}
